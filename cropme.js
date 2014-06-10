@@ -145,7 +145,7 @@
         };
         moveCropZone = function(coords) {
           scope.xCropZone = coords.x - elOffset.left - scope.widthCropZone / 2;
-          scope.yCropZone = coords.y - elOffset.top - scope.heightCropZone / 2;
+          scope.yCropZone = coords.y - elOffset.top + window.pageYOffset - scope.heightCropZone / 2;
           return checkBounds();
         };
         moveBorders = {
