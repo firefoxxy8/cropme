@@ -110,6 +110,9 @@
           scope.dropError = "";
           reader = new FileReader;
           reader.onload = function(e) {
+            if (scope.imgSrc === e.target.result) {
+              scope.state = "step-2";
+            }
             imageEl.onload = function() {
               var errors, height, width;
               width = imageEl.naturalWidth;
